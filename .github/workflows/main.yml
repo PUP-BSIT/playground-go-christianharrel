@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout to Repo
-        uses: actions/checkout@main
+        uses: actions/checkout@v8
       - name: Setup Node
         uses: actions/setup-node@main
         with:
