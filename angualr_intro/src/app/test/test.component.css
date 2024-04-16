@@ -1,0 +1,7 @@
+.paragraph{
+    color:red;
+}
+
+:host:hover{
+    color:yellow;
+}

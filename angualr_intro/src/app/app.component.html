@@ -1,0 +1,9 @@
+<!----<app-test> </app-test>
+
+<p class="paragraph">This is app component view</p> --->
+
+<h1>Welcome {{ username }}</h1>
+<input id="name_bind" [(ngModel)]="username" />
+
+<button (click)="onSubmit($event)" mat-flat-button>Submit</button>
+<p>{{ message }}</p>
