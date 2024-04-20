@@ -28,3 +28,22 @@
 <ul>
   <li *ngFor="let student of students">{{ student }}</li>
 </ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Subject Code</th>
+      <th>Subject Name</th>
+      <th>No. of Units</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let subject of subjects">
+      <td>{{ subject.id }}</td>
+      <td>{{ subject.subject_code }}</td>
+      <td>{{ subject.subject_name }}</td>
+      <td>{{ subject.no_of_units }}</td>
+    </tr>
+  </tbody>
+</table>
