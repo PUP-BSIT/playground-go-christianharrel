@@ -1,1 +1,2 @@
-<p>parent works!</p>
+<app-child [message]="parentMessage" (greet)="response = $event"> </app-child>
+<p>A Message from child: {{ response }}</p>
