@@ -3,17 +3,27 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angualr_intro';
-  username = 'Harrel';
-  message = '';
+  operand_1: number;
+  operand_2: number;
+  result: number;
 
-  onSubmit(event: Event): void {
-    this.message = 'Thank you!';
-     console.log(event);
+  performOperation(operation: string): void {
+    switch(operation) {
+      case 'ADD':
+        this.result = this.operand_1 + this.operand_2;
+        break;
+      case 'SUBTRACT':
+        this.result = this.operand_1 - this.operand_2;
+        break;
+      case 'MULTIPLY':
+        this.result = this.operand_1 * this.operand_2;
+        break;
+      case 'DIVIDE':
+        this.result = this.operand_1 / this.operand_2;
+        break;
+    }
   }
-  
 }
-

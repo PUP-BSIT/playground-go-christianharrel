@@ -1,9 +1,13 @@
-<!----<app-test> </app-test>
+<label for="operand_1">Operand 1:</label>
+<input type="number" id="operand_1" name="operand_1" [(ngModel)]="operand_1">
 
-<p class="paragraph">This is app component view</p> --->
+<label for="operand_2">Operand 2:</label>
+<input type="number" id="operand_2" name="operand_2" [(ngModel)]="operand_2">
 
-<h1>Welcome {{ username }}</h1>
-<input id="name_bind" [(ngModel)]="username" />
+<button (click)="performOperation('ADD')">Add</button>
+<button (click)="performOperation('SUBTRACT')">Subtract</button>
+<button (click)="performOperation('MULTIPLY')">Multiply</button>
+<button (click)="performOperation('DIVIDE')">Divide</button>
 
-<button (click)="onSubmit($event)" mat-flat-button>Submit</button>
-<p>{{ message }}</p>
+<p>Result: {{ result }}</p>
+
