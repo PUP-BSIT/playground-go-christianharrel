@@ -1,3 +1,13 @@
 .paragraph{
     color: green;
 }
+
+.active {
+    color: red;
+    background-color: yellow;
+}
+
+.inactive {
+    color: blue;
+    background-color: pink;
+}

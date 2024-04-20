@@ -9,6 +9,8 @@ export class AppComponent {
   operand_1: number;
   operand_2: number;
   result: number;
+  isActive = true;
+inactive: any;
 
   performOperation(operation: string): void {
     switch(operation) {

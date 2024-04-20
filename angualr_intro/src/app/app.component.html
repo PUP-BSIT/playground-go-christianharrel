@@ -11,3 +11,8 @@
 
 <p>Result: {{ result }}</p>
 
+<div [ngClass]="{ active: isActive, inactive: !isActive }">My Username</div>
+
+<button (click)="isActive = true">Activate</button>
+<button (click)="isActive = false">Deactivate</button>
+
