@@ -24,3 +24,7 @@
 
 <div *ngIf="isLoggedIn; else loggedOut">Welcome user!</div>
 <ng-template #loggedOut> Please login. </ng-template>
+
+<ul>
+  <li *ngFor="let student of students">{{ student }}</li>
+</ul>
