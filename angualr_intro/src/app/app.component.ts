@@ -10,7 +10,8 @@ export class AppComponent {
   operand_2: number;
   result: number;
   isActive = true;
-inactive: any;
+  inactive: any;
+  isLoggedIn = false;
 
   performOperation(operation: string): void {
     switch(operation) {
