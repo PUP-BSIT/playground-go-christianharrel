@@ -27,8 +27,14 @@ export class AppComponent {
       subject_name: 'Mathematics',
       no_of_units: 3,
     },
-    { id: 2, subject_code: 'SUB002', subject_name: 'Science', no_of_units: 4 },
-    { id: 3, subject_code: 'SUB003', subject_name: 'English', no_of_units: 2 },
+    { id: 2, 
+      subject_code: 'SUB002', 
+      subject_name: 'Science', 
+      no_of_units: 4 },
+    { id: 3, 
+      subject_code: 'SUB003', 
+      subject_name: 'English', 
+      no_of_units: 2 },
   ];
 
   performOperation(operation: string): void {
