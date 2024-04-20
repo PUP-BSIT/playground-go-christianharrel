@@ -22,4 +22,5 @@
   Logout
 </button>
 
-
+<div *ngIf="isLoggedIn; else loggedOut">Welcome user!</div>
+<ng-template #loggedOut> Please login. </ng-template>
