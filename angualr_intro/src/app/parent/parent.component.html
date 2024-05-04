@@ -1,2 +1,15 @@
 <app-child [message]="parentMessage" (greet)="response = $event"> </app-child>
 <p>A Message from child: {{ response }}</p>
+
+<div #myDiv>My Div</div>
+<button (click)="myDiv.innerHTML = ''">Clear</button>
+<input (input)="myDiv.innerHTML = $event.target.value" />
+<!--TODO: Add a button to clear the input using TRV-->
+
+<app-child
+#child>
+</app-child>
+
+{{ child.toy }}
+<button (click)="child.sayHello()">Say hello</button>
+

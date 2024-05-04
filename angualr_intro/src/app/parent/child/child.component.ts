@@ -11,4 +11,9 @@ export class ChildComponent{
  onButtonClick(){
    this.greet.emit('Hello Parent! I am your child.');
  }
+ toy = 'horse';
+sayHello() {
+console.log('hello');
+}
+
 }
