@@ -1,52 +1,23 @@
-<label for="operand_1">Operand 1:</label>
-<input type="number" id="operand_1" name="operand_1" [(ngModel)]="operand_1" />
 
-<label for="operand_2">Operand 2:</label>
-<input type="number" id="operand_2" name="operand_2" [(ngModel)]="operand_2" />
-
-<button (click)="performOperation('ADD')">Add</button>
-<button (click)="performOperation('SUBTRACT')">Subtract</button>
-<button (click)="performOperation('MULTIPLY')">Multiply</button>
-<button (click)="performOperation('DIVIDE')">Divide</button>
-
-<p>Result: {{ result }}</p>
-
-<div [ngClass]="{ active: isActive, inactive: !isActive }">My Username</div>
-
-<button *ngIf="isLoggedIn" (click)="isActive = true">Activate</button>
-<button *ngIf="isLoggedIn" (click)="isActive = false">Deactivate</button>
-<button *ngIf="!isLoggedIn" (click)="isLoggedIn = true; isActive = true">
-  Login
-</button>
-<button *ngIf="isLoggedIn" (click)="isLoggedIn = false; isActive = false">
-  Logout
-</button>
-
-<div *ngIf="isLoggedIn; else loggedOut">Welcome user!</div>
-<ng-template #loggedOut> Please login. </ng-template>
-
-<ul>
-  <li *ngFor="let student of students">{{ student }}</li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Subject Code</th>
-      <th>Subject Name</th>
-      <th>No. of Units</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let subject of subjects">
-      <td>{{ subject.id }}</td>
-      <td>{{ subject.subject_code }}</td>
-      <td>{{ subject.subject_name }}</td>
-      <td>{{ subject.no_of_units }}</td>
-
-    </tr>
-  </tbody>
-</table>
+<app-alert>Hello</app-alert>
+<app-alert alertType="primary">Hello</app-alert>
+<app-alert alertType="secondary">Hello</app-alert>
+<app-alert alertType="warn">Hello</app-alert>
 
 <app-parent></app-parent>
+
+<input #myInput/>
+<button (click)="logInputValue()">
+Log
+</button>
+
+<app-field mode="display">
+  <ng-container class="display-mode">
+    <div>Title: {{ title }}</div>
+  </ng-container>
+  <ng-container class="edit-mode">
+    <label>Title: </label>
+    <input [value]="title" />
+  </ng-container>
+</app-field>
+
