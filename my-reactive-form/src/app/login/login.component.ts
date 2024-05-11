@@ -4,6 +4,8 @@ import {
   FormGroup,
   Validators,
   FormBuilder,
+  AbstractControl,
+  ValidatorFn,
 } from '@angular/forms';
 
 @Component({
@@ -17,9 +19,33 @@ export class LoginComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) {}
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
+      email: [
+        '',
+        [
+          Validators.required,
+          Validators.email,
+          this.failIfHasTest,
+          this.failIfHasWord('bad', 'bad_word', 'Contain bad word!'),
+        ],
+      ],
       password: ['', [Validators.required, Validators.minLength(8)]],
     });
+  }
+
+  failIfHasTest(control: AbstractControl) {
+    if (!control.value.toLowerCase().includes('test')) {
+      return null;
+    }
+    return { test_data: 'value is invalid' };
+  }
+
+  failIfHasWord(word: string, errCode: string, errMsg: string): ValidatorFn {
+    return (control: AbstractControl) => {
+      if (!control.value.toLowerCase().includes(word)) {
+        return null;
+      }
+      return { [errCode]: errMsg };
+    };
   }
 
   onSubmit() {
