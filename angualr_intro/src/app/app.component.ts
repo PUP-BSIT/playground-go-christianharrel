@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 
 type Subject = {
   id: number;
@@ -30,6 +31,7 @@ export class AppComponent {
     { id: 2, 
       subject_code: 'SUB002', 
       subject_name: 'Science', 
+      
       no_of_units: 4 },
     { id: 3, 
       subject_code: 'SUB003', 
@@ -37,6 +39,7 @@ export class AppComponent {
       no_of_units: 2 },
   ];
 
+  
   performOperation(operation: string): void {
     switch (operation) {
       case 'ADD':
