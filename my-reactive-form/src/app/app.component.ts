@@ -9,5 +9,6 @@ import * as $ from 'jquery'
 export class AppComponent implements OnInit {
   title = 'my-reactive-form';
   ngOnInit(): void {
+    $("p").hide();
 }
 }
